@@ -10,7 +10,7 @@ ARG version=1.20.1
 
 
 ########################################################
-############## Download Paper with API #################
+############## Download Purpur with API #################
 ########################################################
 WORKDIR /opt/minecraft
 COPY ./getpurpurserver.sh /

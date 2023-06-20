@@ -13,9 +13,9 @@ ARG version=1.20.1
 ############## Download Paper with API #################
 ########################################################
 WORKDIR /opt/minecraft
-COPY ./getpaperserver.sh /
-RUN chmod +x /getpaperserver.sh
-RUN /getpaperserver.sh ${version}
+COPY ./getpurpurserver.sh /
+RUN chmod +x /getpurpurserver.sh
+RUN /getpurpurserver.sh ${version}
 
 ########################################################
 ############## Running environment #####################
@@ -34,7 +34,7 @@ RUN set -eux; \
 WORKDIR /data
 
 # Obtain runable jar from build stage
-COPY --from=build /opt/minecraft/paperclip.jar /opt/minecraft/paperspigot.jar
+COPY --from=build /opt/minecraft/purpurclip.jar /opt/minecraft/purpur.jar
 
 # Install and run rcon
 ARG RCON_CLI_VER=1.6.0
